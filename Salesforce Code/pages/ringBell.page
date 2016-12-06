@@ -1,0 +1,49 @@
+<apex:page controller="ringBell" applyBodyTag="false" applyHtmlTag="false" showHeader="false" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS212, '/assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+    <style>
+        p{
+            padding-bottom: 30px !important;
+        }
+    </style>
+    <apex:form >
+        <div class="slds rmb">
+            <div class="slds-page-header" role="banner">
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__body">
+                          <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="Ring My Bell">Ring My Bell</h1>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <div class="slds-box slds-box--small slds-theme--shade slds-text">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <label class="slds-form-element__label" for="times">Times</label>
+                                <apex:inputText id="times" value="{!times}" label="Times"  styleclass="slds-input"/>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <label class="slds-form-element__label" for="chooseSpeed">Speed</label>
+                                <apex:selectList id="chooseSpeed" value="{!speed}" size="1" styleclass="slds-select">
+                                <apex:selectOption itemValue="FAST" itemLabel="Fast"/>
+                                <apex:selectOption itemValue="MEDIUM" itemLabel="Medium"/>
+                                <apex:selectOption itemValue="SLOW" itemLabel="Slow"/>
+                            </apex:selectList> 
+                            </div>
+                        </div>
+                         <div style="text-align:center;padding-top:20px;">
+                            <apex:commandButton style="" styleclass="slds-button slds-button--neutral" action="{!submit}" value="Ring My Bell" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>
