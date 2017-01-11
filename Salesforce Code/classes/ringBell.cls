@@ -1,6 +1,6 @@
 public with sharing class ringBell {
 
-    private static final string ENDPOINT = 'https://7a7b667770.dataplicity.io/ring/{FAST | MEDIUM | SLOW }/{times}';
+    private static final string ENDPOINT = 'https://[yourendpoint].dataplicity.io/ring/{FAST | MEDIUM | SLOW }/{times}';
     private static Ring_My_Bell__c rmb;
     public string speed {get;set;}
     public string times {get;set;}
